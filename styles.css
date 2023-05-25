@@ -9,14 +9,23 @@ body {
     align-items: center;
 }
 
+h1 {
+    font-size: 3rem;
+    font-weight: 800;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
 .buttons {
     display: flex;
     gap: 15px;
+    justify-content: baseline;
+    align-items: baseline;
 }
 
 button {
     padding: 0.4rem 1.5rem;
     font-size: 0.8rem;
+    border-radius: 0.6rem;
 }
 
 #black {
@@ -50,4 +59,11 @@ button {
 
 .cell {
     outline: 1px solid black;
+}
+
+footer {
+    font-size: 1.5rem;
+    text-align: center;
+    padding: 25px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }

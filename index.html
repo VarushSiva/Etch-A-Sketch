@@ -16,10 +16,11 @@
             <button id="rgb" onclick="chooseColor('rgb')">RGB</button>
             <button id="eraser" onclick="chooseColor('white')">Eraser</button>
             <button id="reset" onclick="resetGrid()">Reset</button>
-            <input type="text" placeholder="Grid Size" value="16" id="size" onchange="changeSize(this.value)">
-            <button>Resize</button>
+            <input type="range" min="2" max="100" value="16" id="range">
+            <p></p>
         </div>
         <div class="grid"></div>
     </div>
+    <footer>Made By: Varush Siva</footer>
 </body>
 </html>

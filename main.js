@@ -1,5 +1,11 @@
 let color = "black";
 
+let slider = document.getElementById("range");
+let output = document.querySelector("p");
+output.textContent = slider.value;
+
+slider.addEventListener('input', changeSize)
+
 function makeGrid(size) {
   const grid = document.querySelector(".grid");
   let cells = grid.querySelectorAll("div");
@@ -19,12 +25,10 @@ function makeGrid(size) {
 
 makeGrid(16)
 
-function changeSize(value) {
-    if(value >= 2 && value <= 100) {
-        makeGrid(value);
-    } else {
-        console.log("Please try a number between 2 and 100")
-    }
+function changeSize() {
+    let gridSize = slider.value;
+    output.textContent = slider.value;
+    makeGrid(gridSize);
 }
 
 function chooseColor(choice) {
