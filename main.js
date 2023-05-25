@@ -1,5 +1,9 @@
+let color = "black";
+
 function makeGrid(size) {
   const grid = document.querySelector(".grid");
+  let cells = grid.querySelectorAll("div");
+  cells.forEach((div) => div.remove());
   grid.style.gridTemplateColumns = `repeat(${size}, 1fr)`;
   grid.style.gridTemplateRows = `repeat(${size}, 1fr)`;
 
@@ -13,8 +17,29 @@ function makeGrid(size) {
   }
 };
 
-makeGrid(16);
+makeGrid(16)
+
+function changeSize(value) {
+    if(value >= 2 && value <= 100) {
+        makeGrid(value);
+    } else {
+        console.log("Please try a number between 2 and 100")
+    }
+}
+
+function chooseColor(choice) {
+    color = choice;
+}
 
 function changeColor() {
-    this.style.backgroundColor = "black";
+    if (color === "rgb") {
+        this.style.backgroundColor = `rgb(${Math.random()*255}, ${Math.random()*255}, ${Math.random()*255})`
+    }
+    this.style.backgroundColor = color;
+}
+
+function resetGrid() {
+  const grid = document.querySelector(".grid");
+  let cells = grid.querySelectorAll("div");
+  cells.forEach((div) => div.style.backgroundColor = "white");
 }
