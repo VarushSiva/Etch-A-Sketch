@@ -17,6 +17,7 @@ function makeGrid(size) {
 
   for (let i = 0; i < cellCount; i++) {
     let cell = document.createElement("div");
+    cell.style.backgroundColor = "white";
     cell.addEventListener("mouseover", changeColor)
     cell.className = "cell";
     grid.appendChild(cell);
