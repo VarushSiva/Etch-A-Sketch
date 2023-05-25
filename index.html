@@ -10,18 +10,16 @@
 </head>
 <body>
     <div class="container">
-        <div class="content">
-            <h1>Etch a Sketch</h1>
-            <div class="buttons">
-                <button onclick="chooseColor('black')">Black</button>
-                <button onclick="chooseColor('rgb')">RGB</button>
-                <button onclick="chooseColor('white')">Eraser</button>
-                <button onclick="resetGrid()">Reset</button>
-                <input type="text" placeholder="Grid Size" value="16" id="size" onchange="changeSize(this.value)">
-                <button>Resize</button>
-            </div>
-            <div class="grid"></div>
+        <h1>Etch a Sketch</h1>
+        <div class="buttons">
+            <button id="black" onclick="chooseColor('black')">Black</button>
+            <button id="rgb" onclick="chooseColor('rgb')">RGB</button>
+            <button id="eraser" onclick="chooseColor('white')">Eraser</button>
+            <button id="reset" onclick="resetGrid()">Reset</button>
+            <input type="text" placeholder="Grid Size" value="16" id="size" onchange="changeSize(this.value)">
+            <button>Resize</button>
         </div>
+        <div class="grid"></div>
     </div>
 </body>
 </html>
