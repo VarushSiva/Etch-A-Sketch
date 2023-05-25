@@ -7,9 +7,14 @@ function makeGrid(size) {
 
   for (let i = 0; i < cellCount; i++) {
     let cell = document.createElement("div");
+    cell.addEventListener("mouseover", changeColor)
     cell.className = "cell";
     grid.appendChild(cell);
   }
 };
 
-makeGrid(18);
+makeGrid(16);
+
+function changeColor() {
+    this.style.backgroundColor = "black";
+}
