@@ -4,3 +4,7 @@
     width: 700px;
     outline: 2px solid black;
 }
+
+.cell {
+    outline: 1px solid black;
+}
